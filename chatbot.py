@@ -29,6 +29,20 @@ Business information:
 
 
 def create_chat():
+    business_info = load_business()
+
+    system_instruction = f"""
+    You are a friendly customer support assistant.
+
+    Answer using ONLY the business information below.
+    Never invent prices, services, or opening hours.
+    If information is unavailable, say you don't know.
+    Keep responses short and professional.
+
+    Business information:
+    {json.dumps(business_info, indent=2)}
+    """
+
     return client.chats.create(
         model="gemini-3.5-flash-lite",
         config=types.GenerateContentConfig(

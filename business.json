@@ -1,15 +1,14 @@
-
 {
-  "name": "Fresh Cuts Barbershop",
+  "name": "Ubzzys Fresh Cuts",
   "location": "Oshawa, Ontario",
   "hours": {
     "monday_saturday": "9 AM - 6 PM",
-    "sunday": "Closed"
+    "sunday": "9 AM - 12 PM"
   },
   "services": {
-    "haircut": 30,
+    "haircut": 40,
     "beard_trim": 15,
-    "haircut_and_beard": 40
+    "haircut_and_beard": 45
   },
   "walk_ins": true,
   "appointments_required": false
