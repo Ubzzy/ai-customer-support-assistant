@@ -1,5 +1,7 @@
 
-from chatbot import ask_ai
+from chatbot import create_chat, ask_ai
+
+chat = create_chat()
 
 print("Fresh Cuts AI Assistant")
 print("Type 'exit' to quit.\n")
@@ -14,8 +16,5 @@ while True:
     if not question:
         continue
 
-    try:
-        answer = ask_ai(question)
-        print(f"\nAI: {answer}\n")
-    except Exception as error:
-        print(f"\nError: {error}\n")
+    answer = ask_ai(chat, question)
+    print(f"\nAI: {answer}\n")

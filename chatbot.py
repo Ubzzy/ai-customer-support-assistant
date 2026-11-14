@@ -51,6 +51,17 @@ def create_chat():
     )
 
 
+
 def ask_ai(chat, question):
-    response = chat.send_message(question)
-    return response.text
+    try:
+        response = chat.send_message(question)
+
+        if not response.text:
+            return "Sorry, I couldn't generate a response."
+
+        return response.text
+
+    except Exception as error:
+        print(f"Gemini API error: {type(error).__name__}")
+        return "Sorry, something went wrong. Please try again."
+
