@@ -1,0 +1,16 @@
+
+{
+  "name": "Fresh Cuts Barbershop",
+  "location": "Oshawa, Ontario",
+  "hours": {
+    "monday_saturday": "9 AM - 6 PM",
+    "sunday": "Closed"
+  },
+  "services": {
+    "haircut": 30,
+    "beard_trim": 15,
+    "haircut_and_beard": 40
+  },
+  "walk_ins": true,
+  "appointments_required": false
+}
