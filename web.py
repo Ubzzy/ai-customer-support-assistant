@@ -26,6 +26,11 @@ for message in st.session_state.messages:
 # 4. Handle new messages
 if prompt := st.chat_input("Ask a question..."):
 
+    
+    if len(prompt) > 500:
+        st.error("Your message is too long. Maximum 500 characters.")
+        st.stop()
+
     st.session_state.messages.append({
         "role": "user",
         "content": prompt
